@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gandalf-colombo-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gandalf-colombo-demo
+  template:
+    metadata:
+      labels:
+        app: gandalf-colombo-demo
+    spec:
+      containers:
+      - name: gandalf-colombo-demo
+        image: gandalf-colombo-demo:latest
+        ports:
+        - containerPort: 80
