@@ -15,5 +15,6 @@ spec:
       containers:
       - name: gandalf-colombo-demo
         image: gandalf-colombo-demo:latest
+        imagePullPolicy: Never     # required for local images on K3s+Docker
         ports:
         - containerPort: 80
