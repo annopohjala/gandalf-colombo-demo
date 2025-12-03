@@ -29,9 +29,6 @@ For this demo, the app is public on port 80 (no sensitive data, per assignment n
 - **VM Firewall (UFW – Extra Layer if Needed)**: Inside the VM, use ufw for host-level control. Why? Double protection if AWS group fails. How: On app VM: `sudo ufw enable; sudo ufw allow from 13.60.70.83 to any port 80`. Check `sudo ufw status`. (Not needed for demo, but production yes.)
 - **Why These?**: AWS groups are cloud-native (best for EC2). UFW is simple OS-level. Together, they follow defense-in-depth (multiple layers). In context: Demo has public access for testing; production restricts to allowed IPs (e.g., Prometheus for /metrics, reviewers for app).
 
-## Suggestions for Production Improvements
-
-These are realistic next steps I would implement in a real environment:
 
 ## Suggestions for Production Improvements
 
